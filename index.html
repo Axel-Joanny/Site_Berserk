@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Berserk - Fan Site</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
+
+
+
+
+  <body>
     <!-- Menu fixe -->
     <header>
-        <nav class="navbar">
-            <!-- Logo image à gauche -->
-            <div class="logo">
-                <img src="image/Berserk-Logo.png" alt="Logo Berserk">
-            </div>
+      <nav class="barre-de-navig">
+        <!-- Logo image à gauche -->
+        <div class="logo">
+          <img src="image/Berserk-Logo.png" alt="Logo Berserk" />
+        </div>
 
-            <!-- Navigation centrée -->
-            <ul class="nav-links">
-                <li><a href="#personnages">Personnages</a></li>
-                <li><a href="#histoire">Histoire</a></li>
-                <li><a href="#auteur">Auteur</a></li>
-            </ul>
-        </nav>
+        <!-- Lien pour la Navigation -->
+        <ul class="navig-lien">
+          <li><a href="#personnages">Personnages</a></li>
+          <li><a href="#histoire">Histoire</a></li>
+          <li><a href="#auteur">Auteur</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="hero">
-        <!-- Logo au-dessus de la vidéo -->
-        <div class="hero-logo">
-            <img src="image/Berserk_anime_logo.png" alt="Logo Berserk">
-            <p class="hero-text">Pourquoi est-ce que je ne réalise jamais ce que j'ai avant de le perdre</p>
-        </div>
-    
-        <!-- Vidéo de fond -->
-        <video autoplay muted loop class="hero-video">
-            <source src="video/BERSERK TRAILER 2025   ENGLISH DUB 𒉭 Studio ECLYPSE.mp4" type="video/mp4">
-            Ton navigateur ne supporte pas la vidéo.
-        </video>
+    <section class="menu">
+      <!-- Logo menu sur la vidéo -->
+      <div class="menu-logo">
+        <img src="image/Berserk_anime_logo.png" alt="Logo Berserk" />
+        <p class="menu-text">
+          "Pourquoi est-ce que je ne réalise jamais ce que j'ai avant de le
+          perdre"
+          - Guts
+        </p>
+      </div>
+
+      <!-- Vidéo dans le fond -->
+      <video autoplay muted loop class="menu-video">
+        <source
+          src="video/BERSERK TRAILER 2025   ENGLISH DUB 𒉭 Studio ECLYPSE.mp4" type="video/mp4"/>
+        La video ne marche pas.
+      </video>
     </section>
 
 
@@ -50,176 +62,224 @@
 
 
     <!-- Sections Perso -->
-    <section id="personnages" class="personnages">
-        <h2>Personnages</h2>
-        <div class="grid-personnages">
-            <!-- Exemple de personnage -->
-            <div class="card">
-                <div class="img-container">
-                    <img src="image/guts.jpg" alt="Guts">
-                    <div class="overlay">
-                        <p>Guts, le guerrier noir, mercenaire solitaire marqué par la fatalité.</p>
-                    </div>
-                </div>
-                <h3>Guts</h3>
+    <section id="personnages" class="perso">
+      <h2>Personnages</h2>
+      <div class="case-de-perso">
+        <!-- Les perso -->
+        <div class="case">
+          <div class="img-perso">
+            <img src="image/guts.jpg" alt="Guts" />
+            <div class="description">
+              <p>
+                Guts, le guerrier noir, mercenaire solitaire marqué par la
+                fatalité.
+              </p>
             </div>
-    
-            <div class="card">
-                <div class="img-container">
-                    <img src="image/griffith.jpg" alt="Griffith">
-                    <div class="overlay">
-                        <p>Griffith, le charismatique chef de la Troupe du Faucon.</p>
-                    </div>
-                </div>
-                <h3>Griffith</h3>
-            </div>
-            <div class="card">
-                <div class="img-container">
-                    <img src="image/casca.jpg" alt="Casca">
-                    <div class="overlay">
-                        <p>Casca, femme guerrière forte et loyale, marquée par un destin tragique.</p>
-                    </div>
-                </div>
-                <h3>Casca</h3>
-            </div>
-    
-            <div class="card">
-                <div class="img-container">
-                    <img src="image/puck.jpg" alt="Puck">
-                    <div class="overlay">
-                        <p>Puck, elfe espiègle et compagnon fidèle de Guts.</p>
-                    </div>
-                </div>
-                <h3>Puck</h3>
-            </div>
-    
-            <div class="card">
-                <div class="img-container">
-                    <img src="image/schierke.jpg" alt="Schierke">
-                    <div class="overlay">
-                        <p>Schierke, jeune sorcière talentueuse et apprentie de Flora.</p>
-                    </div>
-                </div>
-                <h3>Schierke</h3>
-            </div>
-    
-            <div class="card">
-                <div class="img-container">
-                    <img src="image/isidro.jpg" alt="Isidro">
-                    <div class="overlay">
-                        <p>Isidro, jeune aventurier courageux mais imprudent, qui rêve de devenir un grand épéiste.</p>
-                    </div>
-                </div>
-                <h3>Isidro</h3>
-            </div>
-    
-            <div class="card">
-                <div class="img-container">
-                    <img src="image/serpico.jpg" alt="Serpico">
-                    <div class="overlay">
-                        <p>Serpico, épéiste agile et tacticien, dévoué à Farnèse.</p>
-                    </div>
-                </div>
-                <h3>Serpico</h3>
-            </div>
-    
-            <div class="card">
-                <div class="img-container">
-                    <img src="image/663574-farnese_1_sized.jpg" alt="Farnèse">
-                    <div class="overlay">
-                        <p>Farnèse, noble tourmentée, en quête de rédemption et de sens.</p>
-                    </div>
-                </div>
-                <h3>Farnèse</h3>
-            </div>
-    
-            <div class="card">
-                <div class="img-container">
-                    <img src="image/zodd nosferatu.jpg" alt="Zodd">
-                    <div class="overlay">
-                        <p>Zodd, le guerrier immortel et redoutable, connu comme Nosferatu Zodd.</p>
-                    </div>
-                </div>
-                <h3>Rickert</h3>
-            </div>
-    
-            <div class="card">
-                <div class="img-container">
-                    <img src="image/skull knight.jpg" alt="Chevalier Squelette">
-                    <div class="overlay">
-                        <p>Le mystérieux Chevalier Squelette, figure énigmatique et guide de Guts.</p>
-                    </div>
-                </div>
-                <h3>Chevalier Squelette</h3>
-            </div>
-    
-            <!-- Tu répètes la structure pour les 10 persos -->
+          </div>
+          <h3>Guts</h3>
         </div>
+
+        <div class="case">
+          <div class="img-perso">
+            <img src="image/griffith.jpg" alt="Griffith" />
+            <div class="description">
+              <p>Griffith, le charismatique chef de la Troupe du Faucon.</p>
+            </div>
+          </div>
+          <h3>Griffith</h3>
+        </div>
+        <div class="case">
+          <div class="img-perso">
+            <img src="image/casca.jpg" alt="Casca" />
+            <div class="description">
+              <p>
+                Casca, femme guerrière forte et loyale, marquée par un destin
+                tragique.
+              </p>
+            </div>
+          </div>
+          <h3>Casca</h3>
+        </div>
+
+        <div class="case">
+          <div class="img-perso">
+            <img src="image/puck.jpg" alt="Puck" />
+            <div class="description">
+              <p>Puck, elfe espiègle et compagnon fidèle de Guts.</p>
+            </div>
+          </div>
+          <h3>Puck</h3>
+        </div>
+
+        <div class="case">
+          <div class="img-perso">
+            <img src="image/schierke.jpg" alt="Schierke" />
+            <div class="description">
+              <p>Schierke, jeune sorcière talentueuse et apprentie de Flora.</p>
+            </div>
+          </div>
+          <h3>Schierke</h3>
+        </div>
+
+        <div class="case">
+          <div class="img-perso">
+            <img src="image/isidro.jpg" alt="Isidro" />
+            <div class="description">
+              <p>
+                Isidro, jeune aventurier courageux mais imprudent, qui rêve de
+                devenir un grand épéiste.
+              </p>
+            </div>
+          </div>
+          <h3>Isidro</h3>
+        </div>
+
+        <div class="case">
+          <div class="img-perso">
+            <img src="image/serpico.jpg" alt="Serpico" />
+            <div class="description">
+              <p>Serpico, épéiste agile et tacticien, dévoué à Farnèse.</p>
+            </div>
+          </div>
+          <h3>Serpico</h3>
+        </div>
+
+        <div class="case">
+          <div class="img-perso">
+            <img src="image/663574-farnese_1_sized.jpg" alt="Farnèse" />
+            <div class="description">
+              <p>
+                Farnèse, noble tourmentée, en quête de rédemption et de sens.
+              </p>
+            </div>
+          </div>
+          <h3>Farnèse</h3>
+        </div>
+
+        <div class="case">
+          <div class="img-perso">
+            <img src="image/zodd nosferatu.jpg" alt="Zodd" />
+            <div class="description">
+              <p>
+                Zodd, le guerrier immortel et redoutable, connu comme Nosferatu
+                Zodd.
+              </p>
+            </div>
+          </div>
+          <h3>Rickert</h3>
+        </div>
+
+        <div class="case">
+          <div class="img-perso">
+            <img src="image/skull knight.jpg" alt="Chevalier Squelette" />
+            <div class="description">
+              <p>
+                Le mystérieux Chevalier Squelette, figure énigmatique et guide
+                de Guts.
+              </p>
+            </div>
+          </div>
+          <h3>Chevalier Squelette</h3>
+        </div>
+      </div>
     </section>
 
 
 
 
 
-<!-- Section Histoire -->
-<section id="histoire" class="histoire">
-    <h2 class="section-title">Histoire</h2>
-    <div class="histoire-container">
-        <!-- Bloc 1 : texte à gauche, image à droite -->
-        <div class="bloc bloc-left">
-            <div class="texte">
-                <p>
-                    Dans un monde déchiré par les guerres et la corruption, la vie humaine ne vaut
-                    guère plus que le prix du sang versé sur le champ de bataille. C'est dans ce
-                    chaos que Guts, marqué par une naissance tragique, trouve son chemin parmi les
-                    ténèbres. Sa jeunesse n'est qu'une lutte constante pour survivre, forgeant en
-                    lui une force brute et une détermination sans faille. Guidé par rien d'autre que
-                    son épée, il avance, brisant chaque obstacle qui se dresse devant lui.
-                </p>
-            </div>
-            <div class="image">
-                <img src="image/guts-vs-zodd.webp" alt="Guts combat">
-            </div>
+
+
+
+
+
+    <!-- Section Histoire -->
+    <section id="histoire" class="histoire">
+      <h2 class="histoire-titre">Histoire</h2>
+      <div class="histoire-bloc-texte">
+        <!-- Bloc 1 de texte a gauche et img a droite -->
+        <div class="bloc-gauche">
+          <div class="texte-histoire">
+            <p>
+              Dans un monde déchiré par les guerres et la corruption, la vie
+              humaine ne vaut guère plus que le prix du sang versé sur le champ
+              de bataille. C'est dans ce chaos que Guts, marqué par une
+              naissance tragique, trouve son chemin parmi les ténèbres. Sa
+              jeunesse n'est qu'une lutte constante pour survivre, forgeant en
+              lui une force brute et une détermination sans faille. Guidé par
+              rien d'autre que son épée, il avance, brisant chaque obstacle qui
+              se dresse devant lui.
+            </p>
+          </div>
+          <div class="img-histoire">
+            <img src="image/guts-vs-zodd.webp" alt="Guts combat" />
+          </div>
         </div>
 
-        <!-- Bloc 2 : image à gauche, texte à droite -->
-        <div class="bloc bloc-right">
-            <div class="image">
-                <img src="image/eclipse.webp" alt="eclipse">
-            </div>
-            <div class="texte">
-                <p>
-                    Mais le destin bascule lorsqu'il croise le chemin de Griffith et de la Troupe
-                    du Faucon. Ensemble, ils remportent batailles et victoires, changeant le cours
-                    de l'histoire. Pourtant, derrière l'éclat de la gloire se cache une vérité plus
-                    sombre. La camaraderie, l'amitié et les rêves partagés finiront par s'effondrer
-                    dans l'horreur de l'Éclipse, où la trahison marquera à jamais Guts et Casca,
-                    les plongeant dans une lutte désespérée contre les démons et le sacrifice.
-                </p>
-            </div>
+        <!-- Bloc 2 l'inverse -->
+        <div class="bloc-droite">
+          <div class="img-histoire">
+            <img src="image/eclipse.webp" alt="eclipse" />
+          </div>
+          <div class="texte-histoire">
+            <p>
+              Mais le destin bascule lorsqu'il croise le chemin de Griffith et
+              de la Troupe du Faucon. Ensemble, ils remportent batailles et
+              victoires, changeant le cours de l'histoire. Pourtant, derrière
+              l'éclat de la gloire se cache une vérité plus sombre. La
+              camaraderie, l'amitié et les rêves partagés finiront par
+              s'effondrer dans l'horreur de l'Éclipse, où la trahison marquera à
+              jamais Guts et Casca, les plongeant dans une lutte désespérée
+              contre les démons et le sacrifice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Section Auteur -->
+    <section id="auteur" class="auteur">
+      <h2 class="auteur-titre">Auteur</h2>
+
+      <div class="auteur-bloc-texte">
+        <!-- Bloc de biographie  -->
+        <div class="biographie">
+          <div class="img-auteur">
+            <img src="image/Kentaro_Miura.jpg" alt="Kentaro Miura" />
+          </div>
+          <div class="texte-auteur">
+            <p>
+              <strong>Courte biographie :</strong>
+              Kentarō Miura (三浦 建太郎, Miura Kentarō?), né le 11 juillet 1966
+              à Chiba (Japon) et mort le 6 mai 2021, est un dessinateur et
+              scénariste japonais de mangas. Il est notamment connu pour être
+              l'auteur de la série médiévale-fantastique Berserk, qu'il dessine
+              durant 32 ans et qui connaît un succès mondial.
+            </p>
+          </div>
         </div>
 
-    </div>
-</section>
-
-
-
-
-
-
-<!-- Section Auteur -->
-<section id="auteur" class="auteur">
-    <h2 class="section-title">Auteur</h2>
-    <div class="auteur-container">
-        <div class="texte-image">
-            <div class="image">
-                <img src="image/Kentaro_Miura.jpg" alt="Kentaro Miura">
-            </div>
-            <div class="texte">
-                <p>Kentaro Miura, mangaka légendaire, créateur de Berserk. Son œuvre a marqué des générations de lecteurs par sa puissance narrative et artistique.</p>
-                <p>Merci pour tout ce que tu as donné au monde du manga. Repose en paix.</p>
-            </div>
+        <!-- Bloc de message personnel -->
+        <div class="message">
+          <p>
+            Quand j'ai appris le décès de Kentaro Miura. Je n'arrivais pas à y
+            croire. Comment quelqu'un d'aussi talentueux peut-il être volé au
+            reste de l'humanité et s'en aller sans jamais terminer l'œuvre de sa
+            vie, une œuvre d'art qui transcende les pages pour devenir quelque
+            chose de plus beau.
+          </p>
+          <p class="paix">Repose en paix</p>
         </div>
-    </div>
-</section>
-</body>
+      </div>
+    </section>
+  </body>
+</html>

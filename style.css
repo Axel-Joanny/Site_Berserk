@@ -1,244 +1,82 @@
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+/* Reset général : 
+   Supprime marges et paddings par défaut
+   Rend la gestion des tailles plus cohérente (box-sizing: border-box) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #111;
-        color: #eee;
-        line-height: 1.6;
-    }
+/* Corps du site : 
+   Définit police, couleur de fond sombre, couleur texte clair 
+   Améliore la lisibilité avec un line-height plus grand */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.6;
+}
 
-    /* Navbar fixe */
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.85);
-        z-index: 1000;
-    }
+/* Barre de navigation fixe :
+   Toujours visible en haut même lors du scroll 
+   Fond noir semi-transparent, priorité d'affichage (z-index) */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+}
 
-    .navbar {
-        display: flex;
-        align-items: center;
-        padding: 1rem 2rem;
-        position: relative;
-    }
+/* Conteneur de la navbar :
+   Alignement horizontal avec Flexbox */
+.barre-de-navig {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
 
-    /* Logo à gauche */
-    .logo {
-        position: absolute;
-        left: 20px;
-    }
+/* Logo à gauche de la navbar */
+.logo {
+  position: absolute;
+  left: 20px;
+}
 
-    .logo img {
-        height: 50px;
-        width: auto;
-    }
+.logo img {
+  height: 50px;
+  width: auto;
+}
 
-    /* Navigation étalée */
-    .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 80px;      /* espace entre les liens */
-        margin: 0 auto; /* centre horizontalement les liens */
-    }
+/* Liens de navigation centrés :
+   Espacement régulier (gap), supprimé puces de liste */
+.navig-lien {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  margin: 0 auto;
+}
 
-    .nav-links li {
-        flex: none;           /* les liens ne prennent pas toute la largeur */
-        margin: 0 10px;       /* espace fixe entre les liens */
-        text-align: center;
-    }
+.navig-lien li {
+  flex: none;
+  margin: 0 10px;
+  text-align: center;
+}
 
-    .nav-links a {
-        font-family: 'Cinzel', serif;
-        color: #eee;
-        text-decoration: none;
-        transition: color 0.3s;
-        text-transform: uppercase; /* majuscules */
-        letter-spacing: 1px;
-    }
+/* Style des liens : 
+   Police Cinzel, majuscules, changement de couleur au survol */
+.navig-lien a {
+  font-family: "Cinzel", serif;
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-    .nav-links a:hover {
-        color: crimson;
-    }
-
-    /* Hero */
-    .hero {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        padding-top: 80px;
-        overflow: hidden;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        z-index: 1;
-        color: white;
-    }
-
-    .hero-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 0;
-        opacity: 0.3;
-    }
-    .hero-logo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        z-index: 1;
-        margin-bottom: 150px; /* remonte logo + texte */
-    }
-    .hero-logo img {
-        max-width: 600px; /* adapte selon la taille de ton image */
-        width: 80%;       /* responsive */
-        height: auto;
-        z-index: 1;
-        margin-bottom: 20px;
-    }
-    .hero-text {
-        font-family: 'Cinzel', serif; /* police épique */
-        font-size: 1.5rem;
-        color: #eee;
-        margin-top: 15px;
-        font-style: italic;
-        text-shadow: 2px 2px 6px black; /* pour que le texte ressorte sur la vidéo */
-        letter-spacing: 2px;
-    }
-    /* Section personnages */
-    .personnages {
-        padding: 80px 20px;
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                    url("image/berserk-guts-colored-background.jpg");
-        background-size: cover;          /* l'image couvre toute la section */
-        background-position: center;     /* centrée */
-        background-repeat: no-repeat;
-        text-align: center;
-    }
-
-    .personnages h2 {
-        font-family: 'Cinzel', serif;
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        color: crimson;
-        text-shadow: 2px 2px 6px black;
-    }
-
-    .grid-personnages {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .card {
-        color: #eee;
-    }
-
-    /* Container image + overlay */
-    .img-container {
-        position: relative;
-        overflow: hidden;
-        border-radius: 0px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    }
-
-    /* Image */
-    .img-container img {
-        width: 100%;
-        display: block;
-        border-radius: 0px;
-        transition: transform 0.3s ease;
-    }
-
-    /* Zoom léger au hover */
-    .img-container:hover img {
-        transform: scale(1.1);
-    }
-
-    /* Overlay (infos cachées au début) */
-    .overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0,0,0,0.8);
-        color: #eee;
-        padding: 15px;
-        font-size: 0.9rem;
-        opacity: 0;
-        transform: translateY(100%);
-        transition: all 0.4s ease;
-    }
-
-    /* Apparition au hover */
-    .img-container:hover .overlay {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Nom du perso */
-    .card h3 {
-        margin-top: 10px;
-        font-size: 1.2rem;
-        font-family: 'Cinzel', serif;
-    }
-    .personnages {
-        position: relative; /* important pour le ::before */
-        padding: 80px 20px;
-        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                    url("image/berserk-guts-colored-background.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        text-align: center;
-    }
-    .personnages::before {
-        content: "";
-        position: absolute;
-        top: 0; /* placé en haut de la section personnages */
-        left: 0;
-        width: 100%;
-        height: 150px; /* hauteur du fondu */
-        background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-        z-index: 1;
-    }
-    .hero::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 150px; /* longueur du fondu */
-        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
-        z-index: 2; /* au-dessus de la vidéo, derrière logo/texte */
-    }
-    .personnages::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 150px; /* longueur du fondu */
-        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
-        z-index: 2; /* au-dessus du contenu mais derrière le texte si besoin */
-    }
+.navig-lien a:hover {
+  color: crimson;
+}
 
 
 
@@ -246,75 +84,277 @@
 
 
 
+/* Section Menu (Hero principal) :
+   Vidéo en fond, logo centré et texte en superposition */
+.menu {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 80px; /* évite que la navbar masque le contenu */
+  overflow: hidden;
+}
 
-/* Histoire */
+/* Vidéo d’arrière-plan : 
+   Prend toute la place, assombrie avec opacity */
+.menu-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* Logo + texte centré par Flexbox */
+.menu-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 150px;
+}
+
+.menu-logo img {
+  max-width: 600px;
+  width: 80%;
+  height: auto;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+/* Texte sous le logo (style héroïque avec Cinzel) */
+.menu-text {
+  font-family: "Cinzel", serif;
+  font-size: 1.5rem;
+  color: #eee;
+  margin-top: 15px;
+  font-style: italic;
+  text-shadow: 2px 2px 6px black;
+  letter-spacing: 2px;
+}
+
+/* Fondu bas du Menu :
+   Ajoute un dégradé noir en bas pour transition fluide */
+.menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  z-index: 2;
+}
+
+
+
+
+
+
+
+/* Section Personnages :
+   Fond avec image + texte centré, présentation en cartes */
+.perso {
+  position: relative;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("image/berserk-guts-colored-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* Titre section Personnages */
+.perso h2 {
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: crimson;
+  text-shadow: 2px 2px 6px black;
+}
+
+/* Grille responsive pour les personnages */
+.case-de-perso {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.case {
+  color: #eee;
+}
+
+/* Carte personnage : 
+   Image + effet zoom au survol */
+.img-perso {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.img-perso img {
+  width: 100%;
+  display: block;
+  border-radius: 0px;
+  transition: transform 0.3s ease;
+}
+
+.img-perso:hover img {
+  transform: scale(1.1);
+}
+
+/* Texte description caché :
+   Apparaît uniquement au survol avec transition */
+.description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #eee;
+  padding: 15px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+}
+
+.img-perso:hover .description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nom du personnage sous chaque image */
+.case h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-family: "Cinzel", serif;
+}
+
+/* Fondu haut de la section Personnages */
+.perso::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+/* Fondu bas de la section Personnages */
+.perso::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  z-index: 2;
+}
+
+
+
+
+
+
+
+/* Section Histoire :
+   Fond image + overlay sombre, mise en page alternée */
 .histoire {
-    position: relative;
-    min-height: 100vh;
-    padding: 80px 20px;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url("image/background_histoire.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("image/background_histoire.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Fondu en bas de l'histoire */
+/* Fondu haut Histoire */
+.histoire::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+  z-index: 1;
+}
+
+/* Fondu bas Histoire */
 .histoire::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
-    z-index: 2;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+  z-index: 2;
 }
 
-/* Conteneur général */
-.histoire-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+/* Bloc texte histoire centré + espacé */
+.histoire-bloc-texte {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
 
-/* Bloc texte + image */
-.bloc {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+/* Alignement image + texte (gauche/droite) */
+.bloc-gauche,
+.bloc-droite {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
-/* Texte */
-.histoire .texte {
-    flex: 0 0 auto;
-    max-width: 600px;
-    font-family: 'Cinzel', serif; /* police uniforme */
+/* Texte histoire */
+.texte-histoire {
+  flex: 0 0 auto;
+  max-width: 600px;
+  font-family: "Cinzel", serif;
 }
 
-.histoire .texte p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+.texte-histoire p {
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-/* Images */
-.histoire .image img {
-    width: 100%;
-    max-width: 200px;
-    border: 2px solid #eee;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+/* Images histoire */
+.img-histoire img {
+  width: 100%;
+  max-width: 200px;
+  border: 2px solid #eee;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* Titre section */
-.histoire .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: #eee;
-    text-align: center;
-    text-shadow: 2px 2px 6px black;
+/* Titre section histoire */
+.histoire-titre {
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #eee;
+  text-align: center;
+  text-shadow: 2px 2px 6px black;
 }
 
 
@@ -322,81 +362,100 @@
 
 
 
-/* Section Auteur */
+
+/* Section Auteur :
+   Fond image sombre + encadré semi-transparent 
+   Présentation biographie + message hommage */
 .auteur {
-    position: relative;
-    min-height: 80vh;
-    padding: 80px 20px;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url("image/background auteur 3.jpg");
-    background-size: cover;
-    background-position: left center; /* dessin visible à gauche */
-    background-repeat: no-repeat;
-    color: #eee;
+  position: relative;
+  min-height: 80vh;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("image/background auteur 3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #eee;
 }
 
-/* Fondu en haut de la section Auteur */
+/* Fondu haut Auteur */
 .auteur::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: 1;
 }
 
-/* Conteneur autour du bloc image + texte */
-.auteur-container {
-    max-width: 500px;                   /* largeur du bloc */
-    display: flex;
-    flex-direction: column;             /* image au-dessus du texte */
-    align-items: flex-end;              /* bloc aligné à droite */
-    justify-content: flex-start;
-    background: rgba(0, 0, 0, 0.5);     /* fond semi-transparent */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
-    margin-left: auto;                  /* pousse le bloc à droite */
-    margin-right: 40px;                 /* petit écart par rapport au bord */
-    gap: 20px;                          /* espace entre image et texte */
-    position: relative;
-    z-index: 2;
+/* Conteneur texte Auteur :
+   Fond semi-transparent + coins arrondis */
+.auteur-bloc-texte {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 2;
 }
 
-/* Conteneur interne pour image et texte */
-.texte-image {
-    display: flex;
-    flex-direction: column;             /* image au-dessus du texte */
-    align-items: flex-end;              /* alignement à droite */
-    gap: 20px;                          /* espace entre image et texte */
+/* Biographie : image + texte côte à côte */
+.biographie {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Image de l'auteur */
-.auteur .image img {
-    width: auto;
-    height: 300px;                      /* image plus grande */
-    max-width: 100%;                    /* limite largeur */
-    border: 2px solid #eee;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+/* Image auteur */
+.img-auteur img {
+  width: 250px;
+  height: auto;
+  border: 2px solid #eee;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* Texte de l'auteur */
-.auteur .texte p {
-    font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: right;                  /* texte aligné à droite */
-    margin: 0;
+/* Texte biographique */
+.texte-auteur {
+  font-family: "Cinzel", serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 500px;
 }
 
-/* Titre de la section */
-.auteur .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: #eee;
-    text-align: center;
-    text-shadow: 2px 2px 6px black;
+/* Message hommage perso */
+.message {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* "Repose en paix" en rouge */
+.message .paix {
+  color: crimson;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Titre Auteur */
+.auteur-titre {
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #eee;
+  text-align: center;
+  text-shadow: 2px 2px 6px black;
 }
