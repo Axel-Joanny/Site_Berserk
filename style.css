@@ -1,15 +1,10 @@
-/* Reset général : 
-   Supprime marges et paddings par défaut
-   Rend la gestion des tailles plus cohérente (box-sizing: border-box) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Corps du site : 
-   Définit police, couleur de fond sombre, couleur texte clair 
-   Améliore la lisibilité avec un line-height plus grand */
+/* Corps du site */
 body {
   font-family: Arial, sans-serif;
   background-color: #111;
@@ -17,19 +12,18 @@ body {
   line-height: 1.6;
 }
 
-/* Barre de navigation fixe :
-   Toujours visible en haut même lors du scroll 
-   Fond noir semi-transparent, priorité d'affichage (z-index) */
+/* Barre de navigation fixe
+   Toujours visible en haut même lors du scroll */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.85);
-  z-index: 1000;
+  z-index: 999999;
 }
 
-/* Conteneur de la navbar :
-   Alignement horizontal avec Flexbox */
+/* Conteneur de la navbar
+   Alignement horizontal avec flex */
 .barre-de-navig {
   display: flex;
   align-items: center;
@@ -37,7 +31,7 @@ header {
   position: relative;
 }
 
-/* Logo à gauche de la navbar */
+/* Logo a gauche de la navbar */
 .logo {
   position: absolute;
   left: 20px;
@@ -48,8 +42,7 @@ header {
   width: auto;
 }
 
-/* Liens de navigation centrés :
-   Espacement régulier (gap), supprimé puces de liste */
+/* Liens de navigation au centre */
 .navig-lien {
   list-style: none;
   display: flex;
@@ -58,13 +51,11 @@ header {
 }
 
 .navig-lien li {
-  flex: none;
   margin: 0 10px;
   text-align: center;
 }
 
-/* Style des liens : 
-   Police Cinzel, majuscules, changement de couleur au survol */
+/* Style des liens */
 .navig-lien a {
   font-family: "Cinzel", serif;
   color: #eee;
@@ -78,14 +69,32 @@ header {
   color: crimson;
 }
 
+/* Lien IIM a droite */
+.lien-droite {
+  position: absolute;
+  right: 20px;
+}
+
+.lien-droite img {
+  height: 40px;   
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.lien-droite img:hover {
+  transform: scale(1.1);
+}
 
 
 
 
 
 
-/* Section Menu (Hero principal) :
-   Vidéo en fond, logo centré et texte en superposition */
+
+
+
+
+/* Section Menu */
 .menu {
   height: 100vh;
   display: flex;
@@ -98,8 +107,7 @@ header {
   overflow: hidden;
 }
 
-/* Vidéo d’arrière-plan : 
-   Prend toute la place, assombrie avec opacity */
+/* Vidéo d’arrière-plan */
 .menu-video {
   position: absolute;
   top: 0;
@@ -111,7 +119,7 @@ header {
   opacity: 0.3;
 }
 
-/* Logo + texte centré par Flexbox */
+/* logo et texte centrer avec flex */
 .menu-logo {
   display: flex;
   flex-direction: column;
@@ -130,7 +138,7 @@ header {
   margin-bottom: 20px;
 }
 
-/* Texte sous le logo (style héroïque avec Cinzel) */
+/* texte sous le logo */
 .menu-text {
   font-family: "Cinzel", serif;
   font-size: 1.5rem;
@@ -141,8 +149,7 @@ header {
   letter-spacing: 2px;
 }
 
-/* Fondu bas du Menu :
-   Ajoute un dégradé noir en bas pour transition fluide */
+/* Fondu bas du Menu */
 .menu::after {
   content: "";
   position: absolute;
@@ -160,8 +167,10 @@ header {
 
 
 
-/* Section Personnages :
-   Fond avec image + texte centré, présentation en cartes */
+
+
+
+/* Section Personnages */
 .perso {
   position: relative;
   padding: 80px 20px;
@@ -182,7 +191,7 @@ header {
   text-shadow: 2px 2px 6px black;
 }
 
-/* Grille responsive pour les personnages */
+/* Grille responsive pour les personnages avec grid */
 .case-de-perso {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -195,8 +204,8 @@ header {
   color: #eee;
 }
 
-/* Carte personnage : 
-   Image + effet zoom au survol */
+/* Carte personnage 
+   Image et effet zoom grace a hover */
 .img-perso {
   position: relative;
   overflow: hidden;
@@ -215,8 +224,8 @@ header {
   transform: scale(1.1);
 }
 
-/* Texte description caché :
-   Apparaît uniquement au survol avec transition */
+/* Texte description caché 
+   Apparaît grace a hover */
 .description {
   position: absolute;
   bottom: 0;
@@ -243,7 +252,7 @@ header {
   font-family: "Cinzel", serif;
 }
 
-/* Fondu haut de la section Personnages */
+/* Fondu haut Personnages */
 .perso::before {
   content: "";
   position: absolute;
@@ -255,7 +264,7 @@ header {
   z-index: 1;
 }
 
-/* Fondu bas de la section Personnages */
+/* Fondu bas Personnages */
 .perso::after {
   content: "";
   position: absolute;
@@ -273,8 +282,8 @@ header {
 
 
 
-/* Section Histoire :
-   Fond image + overlay sombre, mise en page alternée */
+
+/* Section Histoire */
 .histoire {
   position: relative;
   min-height: 100vh;
@@ -310,7 +319,7 @@ header {
   z-index: 2;
 }
 
-/* Bloc texte histoire centré + espacé */
+/* Bloc texte histoire centrer et espacer */
 .histoire-bloc-texte {
   max-width: 1200px;
   margin: 0 auto;
@@ -319,7 +328,7 @@ header {
   gap: 80px;
 }
 
-/* Alignement image + texte (gauche/droite) */
+/* Alignement image et texte */
 .bloc-gauche,
 .bloc-droite {
   display: flex;
@@ -363,9 +372,8 @@ header {
 
 
 
-/* Section Auteur :
-   Fond image sombre + encadré semi-transparent 
-   Présentation biographie + message hommage */
+
+/* Section Auteur */
 .auteur {
   position: relative;
   min-height: 80vh;
@@ -390,8 +398,7 @@ header {
   z-index: 1;
 }
 
-/* Conteneur texte Auteur :
-   Fond semi-transparent + coins arrondis */
+/* bloc derriere texte Auteur */
 .auteur-bloc-texte {
   max-width: 900px;
   margin: 0 auto;
@@ -406,7 +413,7 @@ header {
   z-index: 2;
 }
 
-/* Biographie : image + texte côte à côte */
+/* Biographie */
 .biographie {
   display: flex;
   gap: 20px;
@@ -443,7 +450,7 @@ header {
   gap: 15px;
 }
 
-/* "Repose en paix" en rouge */
+/* Repose en paix */
 .message .paix {
   color: crimson;
   font-weight: bold;
@@ -458,4 +465,77 @@ header {
   color: #eee;
   text-align: center;
   text-shadow: 2px 2px 6px black;
+}
+
+/* modifie les elements pour les ecran a 1024px */
+@media (max-width: 1024px) {
+  .navig-lien {
+    gap: 40px;
+  }
+  .texte-histoire {
+    max-width: 100%;
+  }
+  .img-auteur img {
+    width: 200px;
+  }
+}
+
+/* pour les ecran a 768px) */
+@media (max-width: 768px) {
+  .navig-lien {
+    gap: 20px;
+    font-size: 0.9rem;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .lien-droite img {
+    height: 30px;
+  }
+  .menu-logo img {
+    max-width: 90%;
+  }
+  .menu-text {
+    font-size: 1.2rem;
+  }
+  .case-de-perso {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  .bloc-gauche,
+  .bloc-droite {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .img-histoire img {
+    max-width: 150px;
+  }
+  .biographie {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .texte-auteur {
+    max-width: 100%;
+  }
+}
+
+/* pour les ecran a 480px */
+@media (max-width: 480px) {
+  .navig-lien {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .perso h2,
+  .histoire-titre,
+  .auteur-titre {
+    font-size: 1.8rem;
+  }
+  body {
+    font-size: 0.9rem;
+  }
+  .menu-text {
+    font-size: 1rem;
+  }
 }
